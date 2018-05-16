@@ -372,7 +372,7 @@ int LoadGame()				//load game
 	{
     	printf("Password Accepted.\n\n");
     	system("pause");
-//    	Chapter2();
+    	Battle("invader2");
 	}
 		
 	else if((strcmp(password, "anotherme") == 0))
@@ -838,6 +838,7 @@ int DmgToPlayer;
 	if (EnemyHealth <= 0){
 			printf("=================================\n");
 		printf("\nYouWin\n\n");
+		system("pause");
 			printf("=================================\n");
 	}
 	
@@ -846,6 +847,8 @@ int DmgToPlayer;
 	else if (PlayerHealth <= 0) {
 			printf("=================================\n");
 		printf("\nGame Over\n\n");
+		system("pause");
+		StartMenu();
 			printf("=================================\n");
 	}
 }
