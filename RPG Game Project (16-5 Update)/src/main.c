@@ -20,6 +20,9 @@
 
 #define MAX_LEN 128
 
+#include "textEngine.h"
+#include "gfxEngine.h"
+
 int choiceH=1, choiceV=1, code=-1, key=-1;  //Kontroler Axis-H dan Axis-V Keyboard. Lihat Controls() 
 int optionA = 0, optionB = 0;				//Pengontrol opsi dialog (maksimal 2 opsi). Lihat Choice()
 int job, progress; 							//Variabel permanen
@@ -347,7 +350,7 @@ int LoadGame()				//load game
 {
 	char password[10];
 	system("cls");
-	text2("> Enter Password:\n\n");
+	text2("> Enter Password:\n\n",20);
 	scanf("%s", password);
 	printf("\n\n");
 	
@@ -834,107 +837,7 @@ int DmgToPlayer;
 			printf("=================================\n");
 	}
 }
-
-void IMG(char *filename)	//fungsi print gambar dari file .txt pakai pointer
-{	
-	char *dir[80];
-	strcpy(dir, "assets/");
-	strcat(dir, filename);
-	strcat(dir, ".txt");
-	
-//	printf("%s", dir);
-	
-    FILE *fptr = NULL;
- 
-    if((fptr = fopen(dir,"r")) == NULL)
-    {
-        fprintf(stderr,"error opening %s\n",filename);
-        return 1;
-    }
- 
-    char read_string[MAX_LEN];
- 
-    while(fgets(read_string,sizeof(read_string),fptr) != NULL)
-        printf("%s",read_string);
- 
-    fclose(fptr);
- 
-    return 0;
-}      
-
-void speaking (char charname[10], char filename[20])	//fungsi memunculkan nama dan gambar untuk dialog
-{
-	system("cls");
-	IMG(filename);
-	printf("\n\n");
-	for(int a = 0; a<100; a++){
-		printf("=");
-	}
-	printf("\n\n");
-	printf("[%s]\n\n", charname);
-}
-
-void speak (char myText[MAX_LEN]) 	//fungsi scrolling text untuk dialog
-{	
-	int size;
-	size = strlen(myText);
-	printf("-- ");
-	for(int x=0;x<size;x++)
-    {   
-        Sleep(10); 
-        printf("%c",myText[x]);
-    }
-	printf(" --\n");
-    getch();
-}
-
-void text (char myText[MAX_LEN]) 	//fungsi scrolling text biasa dengan getch()
-{	
-	int size;
-	size = strlen(myText);
-	for(int x=0;x<size;x++)
-    {   
-        Sleep(10); 
-        printf("%c",myText[x]);
-    }
-    getch();
-}
-
-void text2 (char myText[MAX_LEN], int speed) 	//fungsi scrolling text tanpa getch() dan dengan variabel kecepatan
-{	
-	int size;
-	size = strlen(myText);
-	for(int x=0;x<size;x++)
-    {   
-        Sleep(speed); 
-        printf("%c",myText[x]);
-    }
-}
-
-void ColorText(char myText[MAX_LEN], int color)	//fungsi menampilkan teks berwarna. 'RED' 'GREEN' 'CYAN'
-{
-	switch(color)
-	{
-		case 'RED':
-		printf("\033[1;31m");
-		printf("%s", myText);
-		printf("\033[0m");
-		break;
-		
-		case 'GREEN':
-		printf("\033[1;32m");
-		printf("%s", myText);
-		printf("\033[0m");
-		break;
-		
-		case 'CYAN':
-		printf("\033[1;36m");
-		printf("%s", myText);
-		printf("\033[0m");
-	}
-  	
-}
-                                                        
+                                            
 void Controls(int cNumVert, int cNumHorz)		//Kontroler Axis-H dan Axis-V Keyboard
 {
     code = getch();
