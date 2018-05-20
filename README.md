@@ -22,3 +22,7 @@ dotHunt Progress Update (15-5-2018)
 dotHunt Progress Update (16-5-2018)
 
     Implemented modular-style programming to make content easier
+    
+dotHunt Progress Update (20-5-2018)
+
+    Modified, simplified, and documented for SCELE submission
