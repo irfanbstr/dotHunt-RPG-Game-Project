@@ -31,6 +31,7 @@ char name[10] = "IRF";		//variable Nama karakter. Default = "IRF"
 int main(void)				//main function
 {				
 	SetConsoleTitle("dotHunt by E&I");
+	Prologue2();
 	StartMenu();
 }
 
@@ -124,7 +125,7 @@ int StartMenu()				//start menu
 		break;
 		}
 		
-		Controls(4, 0);
+		Controls(4, 0);  //berikan kontrol vertikal sebanyak 4, horizontal sebanyak 0
 		
 		if (choiceV == 1 && key == 13){
 //			printf("NEWGAME!!");
@@ -519,76 +520,77 @@ int Prologue()				//berisi hardcode cerita prolog bagian 1
 int Prologue2()				//berisi hardcode cerita prolog bagian 2
 {
 	
-	speaking("", "invader");
-    speak("(D Town Square Game Arcade...)");
-    speak("(Permainan Earth Invaders...)");
-
-    speaking("A", "invader");
-    speak("Hey, sudah lama aku tak bermain permainan itu.");
-    speak("Kamu bisa memainkannya kan? Main berdua dong! Haha.");
-    
-    speaking("A", "invader2");
-    speak("Tunggu sebentar...");
-    speak("Alien ini terlihat aneh... Hah?!");
-    speak("Itu tulisan WE yang tadi kita lihat! Sudah kutahu aku mempunyai firasat buruk soal ini.");
-    speak("Coba lihat ke sekitar...");
-    speak("Semua mesin permainan di tempat ini menunjukkan hal yang sama.");
-    speak("Kita salah, yang tadi kita lihat bukanlah siaran. Ini Malware! Jaringan NationNetwork sudah terjangkit Malware.");
-    speak("Semua mesin permainan di tempat ini menunjukkan hal yang sama.");
-
-    speaking("A", "invader2");
-    speak("Tapi apa motif dibalik serangan malware ini? Untuk akuisisi data?");
-    speak("Bukan, menurutku lebih dari itu.");
-    speak("Aku akan coba tap jaringan komunikasi mesin permainan ini menggunakan laptopku.");
-    speak("Tenang saja, IP ku berada di balik tujuh Proxy dan Firewall. Tidak semudah itu malware ini bisa masuk.");
-    
-    speaking("", "invader2");
-    speak("(A mulai mengetik dengan cepat...)");
-
-    speaking("A", "invader2");
-    speak("T-Tidak mungkin... malware ini ganas sekali. Satu.. dua Firewall-ku sudah ditembus.");
-    speak("Tapi sepertinya aku tahu apa yang diambil oleh Malware ini.");
-    speak("Mereka mencuri identitasmu. Semua keterangan tentang dirimu, akun bank, alamat pribadi, semuanya...");
-    speak("Aku tidak tahu apa yang akan teroris ini perbuat, tapi aku tidak suka ini.");    
-    speak("Dan Malware ini bersifat dorman. Meskipun komputer sudah dimatikan, mereka sudah menginfeksi ROM-mu.");
-    speak("Kemudian sialnya kita hidup di zaman dimana perangkat kita selalu terhubung internet dalam kondisi apapun.");
-
-    speaking("A", "invader2");
-    speak("Sial. Aku sudah di Firewall-ku yang terakhir. Aku tidak cukup cepat untuk mengatasi mereka.");
-    speak("Jika mereka mendapat informasiku... Ugh...");
-    speak("SIAAALLLLLL!");
-
-    printf("\n\n");
-    system("pause");
-    
-    system("cls");
-    
-    text2("> SECURITY BREACH ONGOING...\n\n", 50);
-    getch();
-    text2("> LAUNCHING EMERGENCY PROGRAM...\n\n", 50);
-    getch();
-    text2("> CONNECTING TO HUNT NET...\n\n", 30);
-    system("pause");
-    system("cls");
-    IMG("title");
-    
-    text("\n\n> LAUNCHING HUNT.EXE. \n\n");
-    text("> YOU HAVE ONE LAST CHANCE...\n");
-    text2("\n> LET'S HUNT. \n\n",30);
-
-    system("pause");
-	
-	Battle("invader2");
-	
-	speaking("A", "invader2");
-    speak("Entah kenapa kita bisa mengalahkan malware itu...");
-    speak("Firasatku mengatakan kita akan terjebak dalam pertarungan melawan teroris ini...");
-   	system("pause");
-   	
+//	speaking("", "invader");
+//    speak("(D Town Square Game Arcade...)");
+//    speak("(Permainan Earth Invaders...)");
+//
+//    speaking("A", "invader");
+//    speak("Hey, sudah lama aku tak bermain permainan itu.");
+//    speak("Kamu bisa memainkannya kan? Main berdua dong! Haha.");
+//    
+//    speaking("A", "invader2");
+//    speak("Tunggu sebentar...");
+//    speak("Alien ini terlihat aneh... Hah?!");
+//    speak("Itu tulisan WE yang tadi kita lihat! Sudah kutahu aku mempunyai firasat buruk soal ini.");
+//    speak("Coba lihat ke sekitar...");
+//    speak("Semua mesin permainan di tempat ini menunjukkan hal yang sama.");
+//    speak("Kita salah, yang tadi kita lihat bukanlah siaran. Ini Malware! Jaringan NationNetwork sudah terjangkit Malware.");
+//    speak("Semua mesin permainan di tempat ini menunjukkan hal yang sama.");
+//
+//    speaking("A", "invader2");
+//    speak("Tapi apa motif dibalik serangan malware ini? Untuk akuisisi data?");
+//    speak("Bukan, menurutku lebih dari itu.");
+//    speak("Aku akan coba tap jaringan komunikasi mesin permainan ini menggunakan laptopku.");
+//    speak("Tenang saja, IP ku berada di balik tujuh Proxy dan Firewall. Tidak semudah itu malware ini bisa masuk.");
+//    
+//    speaking("", "invader2");
+//    speak("(A mulai mengetik dengan cepat...)");
+//
+//    speaking("A", "invader2");
+//    speak("T-Tidak mungkin... malware ini ganas sekali. Satu.. dua Firewall-ku sudah ditembus.");
+//    speak("Tapi sepertinya aku tahu apa yang diambil oleh Malware ini.");
+//    speak("Mereka mencuri identitasmu. Semua keterangan tentang dirimu, akun bank, alamat pribadi, semuanya...");
+//    speak("Aku tidak tahu apa yang akan teroris ini perbuat, tapi aku tidak suka ini.");    
+//    speak("Dan Malware ini bersifat dorman. Meskipun komputer sudah dimatikan, mereka sudah menginfeksi ROM-mu.");
+//    speak("Kemudian sialnya kita hidup di zaman dimana perangkat kita selalu terhubung internet dalam kondisi apapun.");
+//
+//    speaking("A", "invader2");
+//    speak("Sial. Aku sudah di Firewall-ku yang terakhir. Aku tidak cukup cepat untuk mengatasi mereka.");
+//    speak("Jika mereka mendapat informasiku... Ugh...");
+//    speak("SIAAALLLLLL!");
+//
+//    printf("\n\n");
+//    system("pause");
+//    
+//    system("cls");
+//    
+//    text2("> SECURITY BREACH ONGOING...\n\n", 50);
+//    getch();
+//    text2("> LAUNCHING EMERGENCY PROGRAM...\n\n", 50);
+//    getch();
+//    text2("> CONNECTING TO HUNT NET...\n\n", 30);
+//    system("pause");
+//    system("cls");
+//    IMG("title");
+//    
+//    text("\n\n> LAUNCHING HUNT.EXE. \n\n");
+//    text("> YOU HAVE ONE LAST CHANCE...\n");
+//    text2("\n> LET'S HUNT. \n\n",30);
+//
+//    system("pause");
+//	
+//	Battle("invader2");
+//	
+//	speaking("A", "invader2");
+//    speak("Entah kenapa kita bisa mengalahkan malware itu...");
+//    speak("Firasatku mengatakan kita akan terjebak dalam pertarungan melawan teroris ini...");
+//   	system("pause");
+//   	
    	system("cls");
    	text("To Be Continued.\n\n");
    	text("Thanks for Playing!!! -- E & I.\n\n");
    	text("Returning to Main Menu. Use password 'beginhunt' to view WIP Chapter 1!!\n\n");
+   	getch();
    	system("pause");
    	
    	StartMenu();
@@ -654,16 +656,16 @@ int Chapter1()				//berisi hardcode cerita chapter 1
 int Battle(char enemy[20])	//fungsi Battle
 {
 	
-system("cls");
+	system("cls");
 
-int PlayerHealth = 200;
-int EnemyHealth = 100;
-int Choice1,Choice2,Choice3;
-int DmgToEnemy = 10;
-int DmgBlock=0;
-int BitCredit;
+	int PlayerHealth = 200;
+	int EnemyHealth = 100;
+	int Choice1,Choice2,Choice3;
+	int DmgToEnemy = 10;
+	int DmgBlock=0;
+	int BitCredit;
 int FireDmg = 5;
-int IceDmg = 5;
+	int IceDmg = 5;
 int ThunderDmg = 5;
 int PMP = 100;
 int EMP = 100;
@@ -678,6 +680,7 @@ int burn = 0;
 int frost= 0;
 int shock = 0;
 int DmgToPlayer;
+
 	do{
 
    

@@ -1,0 +1,15 @@
+1. https://cboard.cprogramming.com/cplusplus-programming/161868-how-use-ascii-art-c-cplusplus.html
+
+untuk print gambar ASCII di C
+
+2. http://web.theurbanpenguin.com/adding-color-to-your-output-from-c/
+
+untuk teks berwarna di C
+
+3. https://www.asciiart.eu/
+
+sumber gambar gambar ASCII
+
+4. https://stackoverflow.com/questions/10463201/getch-and-arrow-codes/11432632
+
+cara menginputkan arrowkey di C

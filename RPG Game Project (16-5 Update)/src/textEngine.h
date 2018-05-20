@@ -26,6 +26,7 @@ void ColorText(char myText[MAX_LEN], int color)	//fungsi menampilkan teks berwar
 {
 	switch(color)
 	{
+		
 		case 'RED':
 		printf("\033[1;31m");
 		printf("%s", myText);
